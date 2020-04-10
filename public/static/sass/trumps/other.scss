@@ -1,0 +1,625 @@
+.mobileOnly {
+    display: none !important;
+}
+
+@include if-device(phone) {
+    .desktopOnly {
+        display: none !important;
+    }
+
+    .mobileOnly {
+        display: block !important;
+    }
+}
+
+// ---- Height ----
+.#{$scu-val-prefix}height-full {
+    height: 100%;
+}
+
+// ---- Width ----
+
+    .#{$scu-val-prefix}width-auto {
+        width:auto#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}width-fill {
+        width:auto#{$scu-val-important};
+        display: block#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}width-full {
+        width:100%#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}width-full-alt {
+        width:100%#{$scu-val-important};
+        display: block#{$scu-val-important};
+        box-sizing: border-box#{$scu-val-important};
+    }
+
+    @if $scu-build-tablet-classes{
+        @include if-device(tablet) {
+            .#{$scu-val-prefix-tablet}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-tablet-classes{
+        @include if-device(phone-tablet) {
+            .#{$scu-val-prefix-phone-tablet}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-classes{
+        @include if-device(phone) {
+
+            .#{$scu-val-prefix-phone}width-auto {
+                width:auto#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-fill {
+                width:auto#{$scu-val-important};
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-full {
+                width:100%#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}width-full-alt {
+                width:100%#{$scu-val-important};
+                display: block#{$scu-val-important};
+                box-sizing: border-box#{$scu-val-important};
+            }
+        }
+    }
+
+// ---- Floats and Clear Fix ----
+
+    .#{$scu-val-prefix}fl {
+        float:left#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}fr {
+        float:right#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}fn {
+        float:none#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}clr,
+    .#{$scu-val-prefix}clear {
+        clear:both;
+    }
+
+    .#{$scu-val-prefix}cf,
+    .#{$scu-val-prefix}clearfix {
+        zoom: 1;
+
+        &:before,
+        &:after {
+            content: " ";
+            display: table;
+        }
+
+        &:after {
+            clear: both;
+        }
+    }
+
+    @if $scu-build-tablet-classes{
+        @include if-device(tablet) {
+            .#{$scu-val-prefix-tablet}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}fn {
+                float:none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}clr,
+            .#{$scu-val-prefix-tablet}clear {
+                clear:both;
+            }
+
+            .#{$scu-val-prefix-tablet}cf,
+            .#{$scu-val-prefix-tablet}clearfix {
+                zoom: 1;
+
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
+
+                &:after {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    @if $scu-build-phone-tablet-classes{
+        @include if-device(phone-tablet) {
+            .#{$scu-val-prefix-phone-tablet}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}fn {
+                float:none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}clr,
+            .#{$scu-val-prefix-phone-tablet}clear {
+                clear:both;
+            }
+
+            .#{$scu-val-prefix-phone-tablet}cf,
+            .#{$scu-val-prefix-phone-tablet}clearfix {
+                zoom: 1;
+
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
+
+                &:after {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+    @if $scu-build-phone-classes{
+        @include if-device(phone) {
+            .#{$scu-val-prefix-phone}fl {
+                float:left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}fr {
+                float:right#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}fn {
+                float:none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}clr,
+            .#{$scu-val-prefix-phone}clear {
+                clear:both;
+            }
+
+            .#{$scu-val-prefix-phone}cf,
+            .#{$scu-val-prefix-phone}clearfix {
+                zoom: 1;
+
+                &:before,
+                &:after {
+                    content: " ";
+                    display: table;
+                }
+
+                &:after {
+                    clear: both;
+                }
+            }
+        }
+    }
+
+// ---- Alignment ----
+
+    .#{$scu-val-prefix}ac {
+        text-align: center#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}al {
+        text-align: left#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}ar {
+        text-align: right#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}at {
+        vertical-align: top#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}am {
+        vertical-align: middle#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}ab {
+        vertical-align: bottom#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}abl {
+        vertical-align: baseline#{$scu-val-important};
+    }
+
+    @if $scu-build-tablet-classes{
+        @include if-device(tablet) {
+            .#{$scu-val-prefix-tablet}ac {
+                text-align: center#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}al{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}ar {
+                text-align: right#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}at {
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}am {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}ab {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}abl {
+                vertical-align: baseline#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-tablet-classes{
+        @include if-device(phone-tablet) {
+            .#{$scu-val-prefix-phone-tablet}ac {
+                text-align: center#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}al{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}ar {
+                text-align: right#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}at {
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}am {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}ab {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}abl {
+                vertical-align: baseline#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-classes{
+        @include if-device(phone) {
+            .#{$scu-val-prefix-phone}ac {
+                text-align: center#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}al{
+                text-align: left#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}ar {
+                text-align: right#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}at {
+                vertical-align: top#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}am {
+                vertical-align: middle#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}ab {
+                vertical-align: bottom#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}abl {
+                vertical-align: baseline#{$scu-val-important};
+            }
+        }
+    }
+
+// ---- Visibility and more ----
+
+    .#{$scu-val-prefix}hide, .#{$scu-val-prefix}hidden {
+        display: none#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}invisible {
+        visibility: hidden#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}visible {
+        visibility: visible#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}transparent {
+        opacity: 0#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}opaque {
+        opacity: 1#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}inline {
+        display: inline#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}block {
+        display: block#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}inline-block {
+        display: inline-block#{$scu-val-important};
+        max-width: 100%#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}table {
+        display: table#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}table-cell {
+        display: table-cell#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}table-row {
+        display: table-row#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}border-box {
+        box-sizing: border-box#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}hide-text {
+        display: block#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+        text-indent: -9999px#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}ellipsis {
+        white-space: nowrap#{$scu-val-important};
+        overflow: hidden#{$scu-val-important};
+        text-overflow: ellipsis#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}non-selectable, .#{$scu-val-prefix}disable-text-select {
+        user-select: none#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}uc {
+        text-transform: uppercase#{$scu-val-important};
+    }
+    .#{$scu-val-prefix}lc {
+        text-transform: lowercase#{$scu-val-important};
+    }
+
+    .#{$scu-val-prefix}inherit-color{
+        color: inherit#{$scu-val-important};
+    }
+
+    // Media devices to be done
+
+    @if $scu-build-tablet-classes{
+        @include if-device(tablet) {
+
+            .#{$scu-val-prefix-tablet}hide, .#{$scu-val-prefix-tablet}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}transparent {
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}opaque {
+                opacity: 1#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}block {
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}inline-block {
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}table {
+                display: table#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}border-box {
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}non-selectable, .#{$scu-val-prefix-tablet}disable-text-select {
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}uc {
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-tablet}lc {
+                text-transform: lowercase#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}inherit-color{
+                color: inherit#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-tablet-classes{
+        @include if-device(phone-tablet) {
+
+            .#{$scu-val-prefix-phone-tablet}hide, .#{$scu-val-prefix-phone-tablet}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}transparent {
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}opaque {
+                opacity: 1#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}block {
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}inline-block {
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}table {
+                display: table#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}border-box {
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}non-selectable, .#{$scu-val-prefix-phone-tablet}disable-text-select {
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone-tablet}uc {
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone-tablet}lc {
+                text-transform: lowercase#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-tablet}inherit-color{
+                color: inherit#{$scu-val-important};
+            }
+        }
+    }
+
+    @if $scu-build-phone-classes{
+        @include if-device(phone) {
+            .#{$scu-val-prefix-phone}hide, .#{$scu-val-prefix-phone}hidden {
+                display: none#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}invisible {
+                visibility: hidden#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}transparent {
+                opacity: 0#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}opaque {
+                opacity: 1#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}inline {
+                display: inline#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}block {
+                display: block#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}inline-block {
+                display: inline-block#{$scu-val-important};
+                max-width: 100%#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}table {
+                display: table#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}table-cell {
+                display: table-cell#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}table-row {
+                display: table-row#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}border-box {
+                box-sizing: border-box#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}hide-text {
+                display: block#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-indent: -9999px#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}ellipsis {
+                white-space: nowrap#{$scu-val-important};
+                overflow: hidden#{$scu-val-important};
+                text-overflow: ellipsis#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}non-selectable, .#{$scu-val-prefix-phone}disable-text-select {
+                user-select: none#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}uc {
+                text-transform: uppercase#{$scu-val-important};
+            }
+            .#{$scu-val-prefix-phone}lc {
+                text-transform: lowercase#{$scu-val-important};
+            }
+
+            .#{$scu-val-prefix-phone}inherit-color{
+                color: inherit#{$scu-val-important};
+            }
+        }
+    }

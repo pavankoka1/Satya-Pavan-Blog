@@ -1,0 +1,28 @@
+// Based on ITCSS https://cdn-images-1.medium.com/max/1000/0*BBuVTp5OqFcxMXMX.png
+    
+// ========== Settings ==========
+// Config variables
+@import "settings/index";
+
+// ========== Tools ==========
+// Mixins
+@import "tools/index";
+
+// ========== Elements ==========
+// Style html elements
+@import "elements/index";
+
+// ========== Generic ==========
+// Normalize
+@import "generic/index";
+
+:global {
+	// ========== Components ==========
+	// Stylings for page / components
+	// @import "components/index";
+
+	// ========== Trump ==========
+	// Utilities/Helpers
+	@import "trumps/index";
+	@import "elements/kaTex";
+}

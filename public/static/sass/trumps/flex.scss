@@ -1,0 +1,37 @@
+.flex {
+    &_centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_alignLeft {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &_alignCenter {
+        display: flex;
+        justify-content: center;
+    }
+
+    &_alignRight {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &_alignTop {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &_alignMiddle {
+        display: flex;
+        align-items: center;
+    }
+
+    &_alignBottom {
+        display: flex;
+        align-items: flex-end;
+    }
+}

@@ -1,0 +1,147 @@
+@import "fonts";
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	font-size: $global-font-size;
+	line-height: $global-line-height;
+	font-weight: $font-regular;
+	letter-spacing: normal;
+	font-family: $font-family;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: geometricPrecision;
+	color: $black;
+	// background-color: #051D39;
+}
+
+picture {
+	display: block;
+}
+
+button {
+	cursor: pointer;
+
+	&:focus {
+		border: 0;
+		outline: 0;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+small {
+	font-size: 12px;
+}
+
+a {
+	cursor: pointer;
+	color: inherit;
+}
+
+img {
+	/* Makes sure image is never bigger than its parent */
+	max-width: 100%;
+}
+
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: $color-placeholder;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: $color-placeholder;
+}
+
+:-ms-input-placeholder {
+	/* IE 10+ */
+	color: $color-placeholder;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: $color-placeholder;
+}
+
+button {
+	&:focus {
+		outline: none;
+	}
+}
+
+.headings {
+
+	&_h1,
+	&_h2,
+	&_h3,
+	&_h4,
+	&_h6 {
+		font-weight: $font-bold;
+	}
+
+	&_h1 {
+		font-size: 34px;
+		letter-spacing: -1.67px;
+	}
+
+	&_h2 {
+		font-size: 32px;
+		letter-spacing: -1.5px;
+	}
+
+	&_h3 {
+		font-size: 28px;
+	}
+
+	&_h4 {
+		font-size: 22px;
+
+		&.blue {
+			color: $sky-blue;
+		}
+	}
+
+	&_h5 {
+		font-weight: $font-semi-bold;
+		font-size: 18px;
+	}
+
+	&_h6 {
+		font-size: 14px;
+		letter-spacing: 2px;
+	}
+
+	@include if-device(phone) {
+		&_h1 {
+			font-size: 20px;
+			letter-spacing: -1px;
+		}
+
+		&_h2 {
+			font-size: 18px;
+			letter-spacing: 0;
+		}
+
+		&_h3 {
+			font-size: 16px;
+		}
+
+		&_h4 {
+			font-size: 14px;
+		}
+
+		&_h5 {
+			font-size: 12px;
+		}
+
+		&_h6 {
+			font-size: 11px;
+			letter-spacing: 1px;
+		}
+	}
+}

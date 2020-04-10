@@ -30,3 +30,24 @@ const nextConfig = {
 module.exports = withConfig(
     withPlugins([[withCSS], [withSass], [withBundleAnalyzer]], nextConfig)
 );
+
+// import withSass from "@zeit/next-sass";
+// import withCSS from "@zeit/next-css";
+
+// export default withCSS(
+//     withSass({
+//         webpack(config) {
+//             config.module.rules.push({
+//                 test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+//                 use: {
+//                     loader: "url-loader",
+//                     options: {
+//                         limit: 100000,
+//                     },
+//                 },
+//             });
+
+//             return config;
+//         },
+//     })
+// );

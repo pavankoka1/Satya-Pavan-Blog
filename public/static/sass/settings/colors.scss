@@ -1,0 +1,80 @@
+$black: #000;
+$color-placeholder: #D3D3D3;
+$white: #fff;
+$green-text: #68C721;
+$green: #68C721;
+$green-base: #68c721;
+$black-text: #0B0B0B;
+$sky-blue: #55bbea;
+$sky-blue-light: #70BAE5;
+$red: #EC7C7C;
+$red-base: #EB5054;
+$gray-dark: #858B95;
+$gray-text-dark: #A1A6AD;
+$gray-border-light: #EDEEEF;
+$gray-bg-lighter: #F6F6F7;
+$sky-blue-base: $sky-blue;
+$color-placeholder: #BCBCBC;
+$sky-blue-border-base: $sky-blue;
+$blue: #55bbea;
+$blue-light: #70BAE5;
+$blue-text-darker : #142031;
+$bluish-green-base: #24C8AC;
+$sky-blue-base: #55BBEA;
+$black-light: #2d2d2d;
+$black-base: #202020;
+$yellow-text-base: #FABC3D;
+$pink-text-base: #C06D94;
+$sky-blue-text-base: #41BDF6;
+$gray-base: #F8F8F8;
+$black-gray-base: #252525;
+$primary-text: #4C4C4C;
+$colors: (
+    black: $black,
+    color-placeholder: $color-placeholder,
+    white: $white,
+    green-text: $green-text,
+    green: $green,
+    black-text: $black-text,
+    blue: $blue,
+    blue-light: $blue-light,
+    red: $red,
+);
+
+$subjectColors: (
+    physics: #FDAF40,
+    chemistry: #FF7272,
+    maths: #58BFC2,
+    biology: #5DC644,
+    civics: #D7923C,
+    political-science: #FFA231,
+    english: #84BDF3,
+    geography: #7280D8,
+    history: #FF875C,
+    economics: #B873D2,
+    mental-ability: #F6A15F,
+    logical-reasoning: #D37794,
+    science: #7299DE,
+    evs: #4CAF79,
+    sociology: #AA6CE1,
+    legal-studies: #74BFD6,
+    general-knowledge: #EA5970,
+    default: #5A1795,
+    accountancy: #595F8A,
+    business-studies: #3D7778,
+);
+
+$widget-colors: (
+    green: $green-base,
+    gray: $gray-dark,
+    blue: $sky-blue-base,
+    white: $white,
+    // transparent: 'transparent',
+    pink: $pink-text-base,
+    facebook: #34569A,
+    google: #DD4B39,
+    red: $red-base,
+    'light-gray': $gray-bg-lighter
+);
+
+@import "./subjectColors.scss";

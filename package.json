@@ -10,7 +10,7 @@
   "scripts": {
     "start:dev": "nodemon",
     "build": "next build && tsc --project tsconfig.server.json",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "cross-env NODE_ENV=production node dist/index.js -p $PORT",
     "test": "jest --coverage",
     "lint": "eslint './{src,pages,server}/**/*' --ext .tsx,.ts",
     "pretty": "prettier --write --config .prettierrc.js {src,pages,server}/**/*.{ts,tsx}",
@@ -43,6 +43,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.1.1",
+    "react-spring": "^8.0.27",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "styled-components": "^4.3.2"

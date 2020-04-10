@@ -1,0 +1,27 @@
+.#{$scu-val-prefix}clickable, .#{$scu-val-prefix}is-clickable{
+    cursor: pointer#{$scu-val-important};
+}
+
+@if $scu-build-tablet-classes{
+    @include if-device(tablet) {
+        .#{$scu-val-prefix-tablet}clickable, .#{$scu-val-prefix-tablet}is-clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-tablet-classes{
+    @include if-device(phone-tablet) {
+        .#{$scu-val-prefix-phone-tablet}clickable, .#{$scu-val-prefix-phone-tablet}is-clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+    }
+}
+
+@if $scu-build-phone-classes{
+    @include if-device(phone) {
+        .#{$scu-val-prefix-phone}clickable, .#{$scu-val-prefix-phone}is-clickable{
+            cursor: pointer#{$scu-val-important};
+        }
+    }
+}

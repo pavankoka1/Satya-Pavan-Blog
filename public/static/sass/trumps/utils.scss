@@ -1,0 +1,50 @@
+.utils {
+    &_spacer {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        width: 100%;
+        box-shadow: 0 1px 0 0 rgba(255,255,255,0.20);
+    }
+
+    &_customScrollBar {
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                visibility: visible;
+                background-color: lighten(#262626, 40%);
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar:horizontal {
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            visibility: hidden;
+            border-radius: 7px;
+            background-color: lighten(#262626, 60%);
+            transition: background-color 200ms ease-in;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: lighten(#262626, 15%);
+        }
+    }
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.hide {
+    display: none !important;
+}
