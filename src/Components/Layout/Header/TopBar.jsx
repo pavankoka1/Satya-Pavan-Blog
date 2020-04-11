@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 import React from "react";
 // eslint-disable-next-line import/no-unresolved
 import { Hamburger, Search } from "@Components/Shared";
@@ -10,7 +11,7 @@ import {
     Right,
     // eslint-disable-next-line import/named
     SearchText,
-} from "./TopBar";
+} from "./TopBar.js";
 
 const TopBar = () => {
     const today = new Date().toDateString();

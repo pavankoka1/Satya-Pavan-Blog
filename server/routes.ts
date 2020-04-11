@@ -5,5 +5,6 @@ const nextRoutes = require("next-routes");
 const routes = (module.exports = nextRoutes());
 
 routes.add("home", "/home/");
+routes.add("animation", "/a/");
 
 export default routes;

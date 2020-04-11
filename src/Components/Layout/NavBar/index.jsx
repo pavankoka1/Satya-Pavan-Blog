@@ -1,8 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { useRouter } from "next/router";
-import { Wrapper, InnerWrapper, Lists, ListItem, Dot, Icon } from "./index";
+import { Wrapper, InnerWrapper, Lists, ListItem, Dot, Icon } from "./index.js";
 
 const NavLinks = links => {
     let router = useRouter().route;
@@ -10,7 +11,7 @@ const NavLinks = links => {
     return (
         <Lists>
             {links.map(link => (
-                <ListItem isSelected={link === router}>
+                <ListItem isSelected={link === router} id={link}>
                     <Dot />
                     <a>{link}</a>
                 </ListItem>
